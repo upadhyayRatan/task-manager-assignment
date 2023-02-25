@@ -1,8 +1,11 @@
 Please note - Token after login get expires in 30 second.
+
 # task-manager-assignment
 
 #To build the app - npm install
+
 #For serving the app -npm start
+
 #To Register new user- https://task-manager-app-jm0y.onrender.com/users/register 
 JSON -> {
   "name":"Ratan",
@@ -22,6 +25,7 @@ JSON-> {
     "email":"ratanupadhyay6835@gmail.com",
     "otp":"5425"
 }
+
 #To add task - https://task-manager-app-jm0y.onrender.com/tasks/add
 JSON->{
     "date":"2012-04-23T18:25:43.511Z",
@@ -34,7 +38,10 @@ JSon-{
     "status":"completed"
 }
 #To sort task by id - https://task-manager-app-jm0y.onrender.com/tasks/getTasks?sortBy=_id:asc
+
 #To update task - https://task-manager-app-jm0y.onrender.com/tasks/update/:id
+
 #To delete task - https://task-manager-app-jm0y.onrender.com/tasks/delete/:id
+
 # To logout user - https://task-manager-app-jm0y.onrender.com/users/logoutAll
 
