@@ -12,7 +12,6 @@ const {
 //register/create user
 router.post("/register", async (req, res) => {
   const user = new User(req.body);
-  console.log("In re", req.body);
   try {
     await user.save();
     res.status(201).send({ user });
@@ -29,14 +28,12 @@ router.post("/login", async (req, res) => {
       req.body.email,
       req.body.password
     );
-    console.log("User found", user);
     //send otp
     const otp = sendOtpToMail(user.email, user.name);
     user.otp = otp;
     await user.save();
     res.status(201).send({ user, message: "Otp sent to your email-id" });
   } catch (err) {
-    console.log("Error", err);
     res.status(400).send();
   }
 });
@@ -44,7 +41,6 @@ router.post("/login", async (req, res) => {
 //login with otp
 router.post("/otplogin", async (req, res) => {
   try {
-    console.log("In")
     const user = await User.findOne({
       email: req.body.email,
       otp: req.body.otp,
