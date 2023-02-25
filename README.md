@@ -19,6 +19,7 @@ JSON->{
 "email":"ratanupadhyay6835@gmail.com",
   "password":"1234567"
   }
+  ==>Here sending otp in response just in case if otp doesn't reach email-id.
   
 #To login using otp - https://task-manager-app-jm0y.onrender.com/users/otplogin 
 JSON-> {
