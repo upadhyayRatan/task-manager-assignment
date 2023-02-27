@@ -83,7 +83,7 @@ userSchema.methods.toJSON=function(){
 //.methods is used for a single document
 userSchema.methods.generateToken= async function(){
   const user=this;
-  const token=jwt.sign({_id:user.id.toString()},process.env.JWT_SECRETKEY,{expiresIn:'30s'});
+  const token=jwt.sign({_id:user.id.toString()},process.env.JWT_SECRETKEY,{expiresIn:'5m'});
   user.tokens=user.tokens.concat({token});
   await user.save();
   return token;
