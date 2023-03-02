@@ -10,15 +10,6 @@ const taskRouter=require('./src/routers/task');
 const app = express();
 const port = process.env.PORT;
 
-const multer=require('multer')
-const upload=multer({
-  dest:'images'
-})
-
-app.post('/uploadFile',upload.single('profilePhoto') ,(req,res,next)=>{
-res.send()
-})
-
 
 app.use(express.json());
 //use user and task routees
